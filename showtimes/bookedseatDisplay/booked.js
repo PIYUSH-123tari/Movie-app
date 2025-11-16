@@ -171,10 +171,7 @@ function createBookingCard(booking) {
       </div>
 
       <!-- Booking Date -->
-      <div class="detail-item">
-        <div class="detail-label">🕐 Booked On</div>
-        <div class="detail-value">${formattedDate}</div>
-      </div>
+      
     </div>
 
     <!-- Selected Seats Section -->
