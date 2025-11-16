@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav-Bar</title>
+    <link rel="stylesheet" href="navBar.css">
+    <link rel="stylesheet" href="heroSection.css">
+    <link rel="stylesheet" href="movies.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+         <ul class="sidebar">
+          <!-- now browser sees navigation bar two times -->
+           
+            <li id="close"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960" width="27px" fill="black">
+  <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+</svg></a></li>
+  <li class="M"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+  <li class="M"><a href="#Movies"><i class="fas fa-film"></i> Movies</a></li>
+  <li class="M"><a href="#footer"><i class="fas fa-envelope"></i> Contact us</a></li>
+  <li class="M"><a href="../showtimes/show.html"><i class="fas fa-ticket-alt"></i> Book Now</a></li>
+  <li class="M LogOut"><a href=""><i class="fas fa-lock"></i> Log Out</a></li>
+        </ul>
+        <ul>
+            <!-- you have use url in href to different HTML pages that you want to link to -->
+            <li id="logo">
+        <img src="./movie-icon.png" alt="🎬" class="logo-icon">
+         <span>BookMyMovie</span>
+            </li>
+           <li class="hideOnMobile"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+     <li class="hideOnMobile"><a href="#Movies"><i class="fas fa-film"></i> Movies</a></li>
+  <li class="hideOnMobile"><a href="#footer"><i class="fas fa-envelope"></i> Contact us</a></li>
+  <li class="hideOnMobile"><a href="../showtimes/show.html"><i class="fas fa-ticket-alt"></i> Book Now</a></li>
+  <li class="hideOnMobile LogOut"><a href=""><i class="fas fa-lock"></i> Log Out</a></li>
+            <!-- to display menu icon  -->
+            <li id="menu"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black">
+  <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+</svg></a></li>
+        </ul>
+    </nav>
+
+
+     <!-- image slider -->
+      <div class="slider">
+        <div class="slides">
+            <div class="slide active" style="background-image:url(https://img.freepik.com/premium-vector/caramel-popcorn-banner-ads-with-flying-corns-cinema-items-illustration_281653-544.jpg?w=2000);">
+            <div class="text">🍿Friday: free popcorn Refill!
+            </div>
+            </div>
+            <div class="slide" style="background-image:url(https://img.freepik.com/free-vector/cinema-festival-horizontal-sale-banner-template_23-2149939419.jpg);">
+            <div class="text">🎬 Saturday: Buy @ tickets, get 1 free!
+            </div>
+            </div>
+            <div class="slide" style="background-image:url(https://d21buns5ku92am.cloudfront.net/68644/images/478316-Dolby%20Cinema-84fd17-large-1682115160.jpg);">
+            <div class="text">🔊 Experience new dobly Audio, Sound Quality!
+            </div>
+             </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+           
+
+        </div>
+
+      </div>
+
+      <!-- movies section -->
+
+     <div id="Movies">
+  <h2>📽 MOVIES</h2>
+
+  <div id="Now-Showing" class="cinema">
+    <h3>Now Showing</h3>
+
+    <div class="OneRow">
+      <div class="OneElement">
+        <div class="video-container">
+          <iframe
+            data-src="https://www.youtube.com/embed/TcMBFSGVi1c"
+            src="https://www.youtube.com/embed/TcMBFSGVi1c?enablejsapi=1&mute=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+        <h3>Movie: Avengers Endgame</h3>
+        <p>Duration: 3hr 1min</p>
+        <p>Language: English</p>
+        <a href="https://www.imdb.com/title/tt4154796" class="btn">More Info ></a>
+      </div>
+
+      <div class="SecondElement">
+        <div class="video-container">
+          <iframe
+            data-src="https://www.youtube.com/embed/JfVOs4VSpmA"
+            src="https://www.youtube.com/embed/JfVOs4VSpmA?enablejsapi=1&mute=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+        <h3>Movie: SpiderMan: No Way Home</h3>
+        <p>Duration: 2hr 39min</p>
+        <p>Language: English</p>
+        <a href="https://www.imdb.com/title/tt10872600/" class="btn">More Info ></a>
+      </div>
+    </div>
+
+    <div class="SecondRow">
+      <div class="OneElement">
+        <div class="video-container">
+          <iframe
+            data-src="https://www.youtube.com/embed/BAk5ZCoTWY8"
+            src="https://www.youtube.com/embed/BAk5ZCoTWY8?enablejsapi=1&mute=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+        <h3>Movie: Sikandar</h3>
+        <p>Duration: 3hr 1min</p>
+        <p>Language: Hindi</p>
+        <a href="https://www.imdb.com/title/tt31712434/" class="btn">More Info ></a>
+      </div>
+
+      <div class="SecondElement">
+        <div class="video-container">
+          <iframe
+            data-src="https://www.youtube.com/embed/AdwGOloQcAs"
+            src="https://www.youtube.com/embed/AdwGOloQcAs?enablejsapi=1&mute=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+        <h3>Movie: Marco</h3>
+        <p>Duration: 2hr 25min</p>
+        <p>Language: Malayalam</p>
+        <a href="https://www.imdb.com/title/tt29383379/" class="btn">More Info ></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="Upcoming" class="cinema">
+    <h3>Upcoming</h3>
+
+    <div class="OneRow">
+      <div class="OneElement">
+        <div class="video-container">
+          <iframe
+            data-src="https://www.youtube.com/embed/2VUDAW5nhxs"
+            src="https://www.youtube.com/embed/2VUDAW5nhxs?enablejsapi=1&mute=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+        <h3>Movie: Dashavatar</h3>
+        <p>Duration: 2hr</p>
+        <p>Language: Marathi</p>
+        <a href="https://www.imdb.com/title/tt35661996/" class="btn">More Info ></a>
+      </div>
+
+      <div class="SecondElement">
+        <div class="video-container">
+          <iframe
+            data-src="https://www.youtube.com/embed/nb_fFj_0rq8"
+            src="https://www.youtube.com/embed/nb_fFj_0rq8?enablejsapi=1&mute=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+        <h3>Movie: Avatar: Fire and Ash</h3>
+        <p>Duration: 3hr 12min</p>
+        <p>Language: English</p>
+        <a href="https://www.imdb.com/title/tt1757678/" class="btn">More Info ></a>
+      </div>
+    </div>
+
+   <div class="SecondRow">
+    <div class="OneElement">
+      <div class="video-container">
+        <iframe
+          data-src="https://www.youtube.com/embed/M2OnifMgvps"
+          src="https://www.youtube.com/embed/M2OnifMgvps?enablejsapi=1&mute=1"
+          frameborder="0"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          loading="lazy"></iframe>
+      </div>
+      <h3>Movie: Kantara: Chapter 1</h3>
+      <p>Duration: 2hr 49min</p>
+      <p>Language: Kannada</p>
+      <a href="https://www.imdb.com/title/tt26439764/" class="btn">More Info ></a>
+    </div>
+
+    <!-- keep second column for layout (can stay empty) -->
+    <div class="SecondElement" aria-hidden="true"></div>
+  </div>
+  </div>
+</div>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section">
+          <h3>🎬 BookMyMovie</h3>
+          <p>Your ultimate destination for booking movie tickets online. Watch your favorite movies at your nearest cinema.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-section">
+          <h3>📞 Contact Us</h3>
+          <p>📧 Email: <a href="mailto:support@bookmymovie.com">support@bookmymovie.com</a></p>
+          <p>📱 Phone: <a href="tel:+918765432109">+91 876-543-2109</a></p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://www.instagram.com/bookmymovie" target="_blank" class="social-btn instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/bookmymovie" target="_blank" class="social-btn facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com/bookmymovie" target="_blank" class="social-btn twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="footer-bottom" id="footer">
+        <p>&copy; 2025 BookMyMovie. All rights reserved.</p>
+      </div>
+    </footer>
+     <!-- for mobile device nav bar index.js -->
+    <script src="index.js"></script>
+    <script src="heroSection.js"></script>
+    <script src="movies.js"></script>
+   
+<script type="module" src="logout.js"></script>
+</body>
+</html>

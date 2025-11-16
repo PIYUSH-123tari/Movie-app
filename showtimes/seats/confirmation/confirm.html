@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎫 Booking Confirmation</title>
+  <link rel="stylesheet" href="confirm.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎫 Booking Confirmation</h1>
+      <p class="subtitle">Review your booking details before confirming</p>
+    </div>
+
+    <div class="booking-details">
+      <div class="detail-section">
+        <h2>📽 Movie Details</h2>
+        <div class="detail-item">
+          <label>Movie Name:</label>
+          <span id="displayMovie">-</span>
+        </div>
+        <div class="detail-item">
+          <label>Cinema:</label>
+          <span id="displayCinema">-</span>
+        </div>
+        <div class="detail-item">
+          <label>Date:</label>
+          <span id="displayDate">-</span>
+        </div>
+        <div class="detail-item">
+          <label>Showtime:</label>
+          <span id="displayTime">-</span>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <h2>🪑 Seat Details</h2>
+        <div class="detail-item">
+          <label>Selected Seats:</label>
+          <span id="displaySeats">-</span>
+        </div>
+        <div class="detail-item">
+          <label>Total Seats:</label>
+          <span id="displaySeatCount">-</span>
+        </div>
+        <div class="detail-item">
+          <label>Total Amount:</label>
+          <span id="displayTotalPrice" class="price">₹-</span>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <h2>👤 User Details</h2>
+        <div class="detail-item">
+          <label>User ID:</label>
+          <span id="displayUserId">-</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bill-summary">
+      <h3>💰 Bill Summary</h3>
+      <div class="bill-item">
+        <span>Total Seats:</span>
+        <span id="billSeats">0</span>
+      </div>
+      <div class="bill-item">
+        <span>Total Price:</span>
+        <span id="billPrice" class="amount">₹0</span>
+      </div>
+      <div class="bill-divider"></div>
+      <div class="bill-item total">
+        <span>Grand Total:</span>
+        <span id="billTotal" class="amount">₹0</span>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button id="confirmBtn" class="btn confirm-btn">
+        <span class="btn-icon">✓</span> Confirm & Pay
+      </button>
+      <button id="backBtn" class="btn back-btn">
+        <span class="btn-icon">←</span> Back to Seats
+      </button>
+    </div>
+
+    <div id="loadingSpinner" class="spinner hidden">
+      <div class="spinner-circle"></div>
+      <p>Processing your booking...</p>
+    </div>
+
+    <div id="successMessage" class="message success hidden">
+      <p>✅ Booking confirmed! Redirecting to home...</p>
+    </div>
+
+    <div id="errorMessage" class="message error hidden">
+      <p id="errorText">❌ Error occurred. Please try again.</p>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js"></script>
+  
+ <script type="module" src="confirm.js"></script>
+</body>
+</html>

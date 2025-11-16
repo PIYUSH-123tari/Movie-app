@@ -1,0 +1,2 @@
+to run .json file such as screen.json and db.json go to file directory and run in terminal 
+npx json-server --watch filename --port 3000(chose separate for screen.json and db.json).

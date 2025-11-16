@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📋 My Bookings</title>
+  <link rel="stylesheet" href="booked.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header with Back Button -->
+  <div class="header">
+    <button id="backBtn" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back
+    </button>
+    <h1>📋 My Bookings</h1>
+    <div class="spacer"></div>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div id="loadingSpinner" class="spinner">
+    <div class="spinner-circle"></div>
+    <p>Loading your bookings...</p>
+  </div>
+
+  <!-- Bookings Container -->
+  <div id="bookingsContainer" class="bookings-container"></div>
+
+  <!-- No Bookings Message -->
+  <div id="noBookingsMessage" class="no-bookings hidden">
+    <div class="no-bookings-content">
+      <i class="fas fa-inbox"></i>
+      <h2>No Bookings Yet</h2>
+      <p>You haven't booked any tickets yet.</p>
+      <button id="bookNowBtn" class="book-now-btn">
+        <i class="fas fa-ticket-alt"></i> Book Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div id="errorMessage" class="error-message hidden">
+    <i class="fas fa-exclamation-circle"></i>
+    <p id="errorText">Error loading bookings</p>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js"></script>
+
+  <script type="module" src="booked.js"></script>
+</body>
+</html>

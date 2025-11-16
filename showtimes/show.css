@@ -1,0 +1,299 @@
+/* General styles */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: rgb(166, 166, 249);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.nav-center h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Booked Seats Navigation Button */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.booked-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: white;
+  color: rgb(125, 125, 235);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booked-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.booked-btn:active {
+  transform: translateY(0);
+}
+
+.booked-btn i {
+  font-size: 1.2rem;
+}
+
+/* Date bar */
+.date-bar {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  background: #fff;
+  border-bottom: 2px solid rgb(125, 125, 235);
+}
+
+.date-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #ddd;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.date-btn:hover {
+  background: #ccc;
+}
+
+.date-btn.active {
+  background: rgb(125, 125, 235);
+  color: white;
+  box-shadow: 0 2px 6px rgba(125, 125, 235, 0.3);
+}
+
+.date-btn.disabled {
+  background: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Movie cards */
+#showtimesContainer {
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.showtime-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.showtime-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.movie-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.theatre {
+  color: rgb(125, 125, 235);
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.time-btn {
+  background: #eaf0ff;
+  border: 1px solid rgb(125, 125, 235);
+  color: rgb(125, 125, 235);
+  border-radius: 5px;
+  padding: 6px 10px;
+  margin: 5px 5px 0 0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.time-btn:hover {
+  background: rgb(125, 125, 235);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Disabled/selected states for time buttons */
+.time-btn.disabled {
+  background: #f0f0f0;
+  color: #aaa;
+  border-color: #ddd;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.time-btn.selected {
+  background: rgb(125, 125, 235);
+  color: #fff;
+  border-color: rgb(125, 125, 235);
+  box-shadow: 0 0 8px rgba(125, 125, 235, 0.5);
+}
+
+/* Choose Seat button placed at bottom of the showtime card */
+.choose-seat {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 12px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: rgb(125, 125, 235);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.choose-seat:hover {
+  background: rgb(100, 100, 210);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(125, 125, 235, 0.3);
+}
+
+.choose-seat:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-center {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-right {
+    width: 100%;
+  }
+
+  .booked-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .date-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .showtime-card {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .movie-title {
+    font-size: 1rem;
+  }
+
+  .time-btn {
+    padding: 5px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-center h2 {
+    font-size: 1.3rem;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .booked-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    width:40%;
+    margin: 0 auto;
+  }
+
+  .booked-btn i {
+    font-size: 1rem;
+  }
+
+  #showtimesContainer {
+    padding: 10px;
+  }
+
+  .showtime-card {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .theatre {
+    font-size: 0.9rem;
+  }
+
+  .time-btn {
+    padding: 4px 6px;
+    font-size: 0.8rem;
+    margin: 4px 4px 0 0;
+  }
+
+  .choose-seat {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}

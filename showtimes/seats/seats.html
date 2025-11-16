@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎟 Seat Booking</title>
+  <link rel="stylesheet" href="seats.css">
+</head>
+<body>
+  <div class="header">
+    <h1>🎟 Seat Booking</h1>
+    <div class="booking-info">
+      <p><strong>Movie:</strong> <span id="movieName">-</span></p>
+      <p><strong>Date:</strong> <span id="dateDisplay">-</span></p>
+      <p><strong>Time:</strong> <span id="timeDisplay">-</span></p>
+      <p><strong>Cinema:</strong> <span id="cinemaDisplay">-</span></p>
+    </div>
+  </div>
+
+  <div class="screen-display">📺 SCREEN 1</div>
+
+  <div id="seatContainer" class="seat-container"></div>
+
+  <div class="legend">
+    <div class="legend-item">
+      <div class="seat available"></div>
+      <span>Available</span>
+    </div>
+    <div class="legend-item">
+      <div class="seat selected"></div>
+      <span>Selected</span>
+    </div>
+    <div class="legend-item">
+      <div class="seat booked"></div>
+      <span>Booked</span>
+    </div>
+  </div>
+
+  <div class="summary">
+    <h2>Summary</h2>
+    <p>Selected Seats: <span id="selectedSeats">None</span></p>
+    <p>Total Seats: <span id="seatCount">0</span></p>
+    <p>Price per Seat: ₹<span id="pricePerSeat">0</span></p>
+    <p class="total">Total Price: ₹<span id="totalPrice">0</span></p>
+  </div>
+
+  <button id="bookButton" class="book-btn hidden">Book Now</button>
+
+  <script src="seats.js"></script>
+</body>
+</html>
