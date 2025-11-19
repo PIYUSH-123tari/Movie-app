@@ -59,7 +59,7 @@
       //setDOc function provided by firestore gets two arguments.
       setDoc(docRef, userData)
       .then(()=>{
-        window.location.href="form.html";// redirect to login page after successful registration
+        window.location.href="index.html";// redirect to login page after successful registration
       }).catch((err)=>{
         console.error("Error adding document: ", err);
       });
